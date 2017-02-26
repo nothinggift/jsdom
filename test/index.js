@@ -1,11 +1,13 @@
 "use strict";
 
 require("./newapi1/basics.js");
+require("./newapi1/encoding.js");
 require("./newapi1/fragment.js");
 require("./newapi1/from-file.js");
 require("./newapi1/from-url.js");
 require("./newapi1/methods.js");
 require("./newapi1/options.js");
+require("./newapi1/virtual-console.js");
 
 require("./jsdom/cancel-requests.js");
 require("./jsdom/cookie.js");
@@ -21,7 +23,6 @@ require("./jsdom/resource-loading.js");
 require("./jsdom/selectors.js");
 require("./jsdom/serialization.js");
 require("./jsdom/utils.js");
-require("./jsdom/virtual-console.js");
 require("./jsdom/xml.js");
 
 require("./browser/css.js");
