@@ -10,16 +10,13 @@ require("./newapi1/options.js");
 require("./jsdom/cancel-requests.js");
 require("./jsdom/cookie.js");
 
-require("./jsdom/encoding.js");
 require("./jsdom/env.js");
 require("./jsdom/inside-worker-smoke-tests.js");
 require("./jsdom/keep-alive-connections.js");
 require("./jsdom/misc.js");
 require("./jsdom/named-properties-tracker.js");
 require("./jsdom/namespaces.js");
-require("./jsdom/node-location.js");
 require("./jsdom/parsing.js");
-require("./jsdom/reconfigure-window.js");
 require("./jsdom/resource-loading.js");
 require("./jsdom/selectors.js");
 require("./jsdom/serialization.js");
