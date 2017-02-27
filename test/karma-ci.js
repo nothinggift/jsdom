@@ -16,8 +16,8 @@ module.exports = options => {
   options.customLaunchers = {
     SLChrome: {
       base: "SauceLabs",
-      browserName: "chrome"
-      // version: "48"
+      browserName: "chrome",
+      version: "56"
     }
   };
   options.browsers = ["SLChrome"];
