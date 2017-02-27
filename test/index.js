@@ -11,27 +11,25 @@ require("./newapi1/virtual-console.js");
 
 require("./jsdom/cancel-requests.js");
 require("./jsdom/cookie.js");
-
 require("./jsdom/env.js");
 require("./jsdom/inside-worker-smoke-tests.js");
 require("./jsdom/keep-alive-connections.js");
-require("./jsdom/misc.js");
 require("./jsdom/named-properties-tracker.js");
-require("./jsdom/namespaces.js");
-require("./jsdom/parsing.js");
 require("./jsdom/resource-loading.js");
-require("./jsdom/selectors.js");
-require("./jsdom/serialization.js");
 require("./jsdom/utils.js");
-require("./jsdom/xml.js");
 
-require("./browser/css.js");
-require("./browser/index.js");
+require("./to-port-to-wpts/css.js");
+require("./to-port-to-wpts/jsonp.js");
+require("./to-port-to-wpts/misc.js");
+require("./to-port-to-wpts/misc2.js");
+require("./to-port-to-wpts/namespaces.js");
+require("./to-port-to-wpts/parsing.js");
+require("./to-port-to-wpts/selectors.js");
+require("./to-port-to-wpts/serialization.js");
+require("./to-port-to-wpts/xml.js");
 
-require("./jsonp/jsonp.js");
-
-require("./level1/core.js");
-require("./level1/html.js");
+require("./to-port-to-wpts/level1/core.js");
+require("./to-port-to-wpts/level1/html.js");
 
 require("./web-platform-tests/to-upstream.js");
 // keep this one last so that you can cancel the test run early

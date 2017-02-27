@@ -25,6 +25,22 @@ describe("newapi1 methods", () => {
       assert.strictEqual(dom.serialize(),
                          `<!DOCTYPE html><html><head></head><body><p>hello world!</p></body></html>`);
     });
+
+    it("should serialize documents with omitted and varying-case html or body tags correctly", () => {
+      const inputs = [
+        "<HTML><BODY></BODY></HTML>",
+        "<html><BODY></Body></HTML>",
+        "<html><body></body></html>",
+        "<body></body>",
+        ""
+      ];
+
+      const outputs = inputs.map(input => (new JSDOM(input)).serialize());
+
+      for (const output of outputs) {
+        assert.strictEqual(output, `<html><head></head><body></body></html>`);
+      }
+    });
   });
 
   describe("nodeLocation", () => {

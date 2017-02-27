@@ -710,7 +710,7 @@ describe("jsdom/env", () => {
 
     specify("should be able to fetch a html document", { async: true }, t => {
       env({
-        url: testServerLocation + "/base/test/jsdom/files/reddit.html",
+        url: testServerLocation + "/base/test/to-port-to-wpts/files/reddit.html",
         done(err, window) {
           assert.ifError(err);
           assert.strictEqual(window.document.getElementById("header-bottom-left").nodeName, "DIV");

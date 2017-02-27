@@ -6,7 +6,6 @@ const http = require("http");
 const https = require("https");
 const enableDestroy = require("server-destroy");
 const request = require("request");
-const exceptionTable = require("../lib/jsdom/web-idl/dom-exception-table.json");
 const Canvas = require("../lib/jsdom/utils").Canvas;
 
 function toPathname(dirname, relativePath) {
@@ -59,24 +58,6 @@ exports.load = dirname => {
 
     fileCache[file] = contents;
     return doc;
-  };
-};
-
-/**
- * @param {Document} document
- * @param {String} name
- * @return {Function} A function that tests if the given
- *         exception is a `DOMException` of the specified `code`
- *
- * @example t.throws(function () {
- *   // ...
- * }, domExceptionPredicate(doc, "NoModificationAllowedError"));
- */
-exports.domExceptionPredicate = (document, name) => {
-  return function (error) {
-    return error instanceof document.defaultView.DOMException &&
-           error.name === name &&
-           error.code === exceptionTable[name].legacyCodeValue;
   };
 };
 
